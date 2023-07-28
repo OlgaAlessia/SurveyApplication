@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	font-family: Georgia, serif;
 }
 #content {
 	margin: 40px;
@@ -22,16 +23,17 @@ body {
 	background-color: #ddd;
 	color: black;
 }
-.messages p {
+
+
+.msg {
 	padding: 1rem;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	border-radius: 1rem;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+	box-shadow: 0 3px 1px rgba(0, 0, 0, .2);
+	background-color: rgba(255, 196, 0, 0.171);
 }
 
-.messages .success {
-	background-color: rgba(0, 255, 0, 0.1);
+.bold{
+	font-weight: 600;
 }
-.messages .error {
-	background-color: rgba(255, 0, 0, 0.1);
-}
+

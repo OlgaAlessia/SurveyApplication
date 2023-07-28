@@ -5,9 +5,13 @@
 <h1>{{question.question}}</h1>
 
 <form action="/answer" method="POST">
-  {% for choice in question.choices %}
-    <p><input type="radio" name="choice" value="{{choice}}">{{choice}}</p>
-  {% endfor %}
-  <button>Continue</button>
+    {% for choice in question.choices %}
+        <p><input type="radio" name="choice" value="{{choice}}">{{choice}}</p>
+    {% endfor %}
+    {% if question.allow_text %}
+        <textarea name="text"></textarea>
+        <br/><br/>
+    {% endif %}
+    <button>Continue</button>
 </form>
 {% endblock %}

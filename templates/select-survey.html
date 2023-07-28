@@ -2,12 +2,13 @@
 {% block title %}Survey List{% endblock %}
 
 {% block content %}
-<h1>{{survey.title}}</h1>
-
-<h3>{{survey.instructions}}<h3>
-
-<form action="/questions/0">
-  <button>Start Survay</button>
-</form>
-
+    <h3>Select a Survey:</h1>
+    <form action="/start_survey", method="POST">
+        <select name="survey_id">    
+            {% for key, survey in surveys.items() %}
+                <option value="{{ key }}">{{ survey.title }}</option>
+            {% endfor %}
+        </select>
+        <button>Select</button>
+    </form>
 {% endblock %}

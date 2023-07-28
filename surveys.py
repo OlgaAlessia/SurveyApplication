@@ -32,6 +32,8 @@ satisfaction_survey = Survey(
         Question("On average, how much do you spend a month on frisbees?",
                  ["Less than $10,000", "$10,000 or more"]),
         Question("Are you likely to shop here again?"),
+        Question("Did you buy Dairy? if so, what?", 
+                 allow_text=True),
     ])
 
 personality_quiz = Survey(
